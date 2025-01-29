@@ -42,4 +42,5 @@ func main() {
     fmt.Printf("Refresh Token: %s\n", jwtPair.RefreshToken)
     fmt.Printf("Refresh Expires at: %v\n", jwtPair.RefreshTokenExp)
 }
+
 ```
