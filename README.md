@@ -1,5 +1,4 @@
 ## JWT Pair Manager
-It's a small library for creating and decoding JWT pairs for my own projects.
 
 ```
 go get github.com/morf1lo/jwt-pair-manager
