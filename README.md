@@ -17,20 +17,20 @@ import (
 
 func main() {
 	data := jwtmanager.GenerateJWTPairData{
-AccessMethod: jwt.SigningMethodHS256,
-AccessSecret: []byte("super_mega_ACCESS_secret"),
-AccessClaims: jwt.MapClaims{
-	"id": 123,
-	"role": "user",
-},
-AccessExpiry: time.Hour,
-RefreshMethod: jwt.SigningMethodHS256,
-RefreshSecret: []byte("super_mega_REFRESH_secret"),
-RefreshClaims: jwt.MapClaims{
-	"id": 123,
-},
-RefreshExpiry: time.Hour * 24 * 3,
-}
+		AccessMethod: jwt.SigningMethodHS256,
+		AccessSecret: []byte("super_mega_ACCESS_secret"),
+		AccessClaims: jwt.MapClaims{
+			"id": 123,
+			"role": "user",
+		},
+		AccessExpiry: time.Hour,
+		RefreshMethod: jwt.SigningMethodHS256,
+		RefreshSecret: []byte("super_mega_REFRESH_secret"),
+		RefreshClaims: jwt.MapClaims{
+			"id": 123,
+		},
+		RefreshExpiry: time.Hour * 24 * 3,
+	}
 
     jwtPair, err := jwtmanager.GenerateJWTPair(data)
     if err != nil {
